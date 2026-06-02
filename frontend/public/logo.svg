@@ -1,0 +1,63 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="20" y1="10" x2="180" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="0.5" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#818CF8" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#4F46E5" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Outer glow ring -->
+  <circle cx="100" cy="100" r="90" fill="url(#glowGrad)"/>
+
+  <!-- Shield body -->
+  <path d="M100 16 L172 46 L172 112 C172 152 140 182 100 192 C60 182 28 152 28 112 L28 46 Z"
+        fill="url(#shieldGrad)" filter="url(#softShadow)"/>
+
+  <!-- Shield inner highlight (top edge shine) -->
+  <path d="M100 22 L166 50 L166 55 L100 27 L34 55 L34 50 Z"
+        fill="white" fill-opacity="0.18"/>
+
+  <!-- Road lines (perspective road going into distance) -->
+  <path d="M100 170 L68 130 L100 135 L132 130 Z" fill="white" fill-opacity="0.12"/>
+  <path d="M96 152 L96 135" stroke="white" stroke-width="2.5" stroke-opacity="0.5" stroke-dasharray="4 3"/>
+  <path d="M100 152 L100 135" stroke="white" stroke-width="2.5" stroke-opacity="0.5" stroke-dasharray="4 3"/>
+  <path d="M104 152 L104 135" stroke="white" stroke-width="2.5" stroke-opacity="0.5" stroke-dasharray="4 3"/>
+
+  <!-- Car body (top-down view, clean) -->
+  <rect x="72" y="88" width="56" height="36" rx="8" fill="white" fill-opacity="0.95"/>
+
+  <!-- Car cabin roof -->
+  <rect x="79" y="74" width="42" height="20" rx="6" fill="white" fill-opacity="0.85"/>
+
+  <!-- Windshield tint -->
+  <rect x="82" y="77" width="36" height="14" rx="4" fill="#4F46E5" fill-opacity="0.25"/>
+
+  <!-- Left wheel -->
+  <ellipse cx="78" cy="100" rx="7" ry="9" fill="#312E81"/>
+  <ellipse cx="78" cy="100" rx="3.5" ry="4.5" fill="white" fill-opacity="0.5"/>
+
+  <!-- Right wheel -->
+  <ellipse cx="122" cy="100" rx="7" ry="9" fill="#312E81"/>
+  <ellipse cx="122" cy="100" rx="3.5" ry="4.5" fill="white" fill-opacity="0.5"/>
+
+  <!-- Front left wheel -->
+  <ellipse cx="78" cy="116" rx="7" ry="9" fill="#312E81"/>
+  <ellipse cx="78" cy="116" rx="3.5" ry="4.5" fill="white" fill-opacity="0.5"/>
+
+  <!-- Front right wheel -->
+  <ellipse cx="122" cy="116" rx="7" ry="9" fill="#312E81"/>
+  <ellipse cx="122" cy="116" rx="3.5" ry="4.5" fill="white" fill-opacity="0.5"/>
+
+  <!-- Checkmark badge (bottom right of shield) -->
+  <circle cx="138" cy="152" r="16" fill="#10B981"/>
+  <circle cx="138" cy="152" r="13" fill="#10B981" stroke="white" stroke-width="2.5"/>
+  <path d="M130 152 L135.5 158 L147 144" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
